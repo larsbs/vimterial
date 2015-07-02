@@ -85,9 +85,9 @@ hi Function         guifg=#c792ea               gui=none ctermbg=none
 " ==========
 
 " Any statement
-hi Statement        guifg=#c792ea               gui=none ctermbg=none
+hi Statement        guifg=#cdd3de               gui=none ctermbg=none
 " if, then, else, endif, switch, etc.
-"hi Conditional      guifg=#c792ea               gui=none ctermbg=none
+hi Conditional      guifg=#c792ea               gui=none ctermbg=none
 " for, do, while, etc.
 "hi Repeat           guifg=#c792ea               gui=none ctermbg=none
 " case, default, etc.
@@ -135,13 +135,13 @@ hi Statement        guifg=#c792ea               gui=none ctermbg=none
 " ========
 
 " Any special symbol
-"hi Special          guifg=#c792ea               gui=none ctermbg=none
+hi Special          guifg=#cdd3de               gui=none ctermbg=none
 " Special character in a constant
 "hi SpecialChar      guifg=#c792ea               gui=none ctermbg=none
 " You can use CTRL-] on this
 "hi Tag              guifg=#c792ea               gui=none ctermbg=none
 " Character that needs attention
-"hi Delimiter        guifg=#c792ea               gui=none ctermbg=none
+hi Delimiter        guifg=#00ffff               gui=none ctermbg=none
 " Special things inside a comment
 "hi SpecialComment   guifg=#c792ea               gui=none ctermbg=none
 " Debugging statements
