@@ -127,7 +127,7 @@ hi Special          guifg=#cdd3de               gui=none ctermbg=none
 " Special character in a constant
 hi SpecialChar      guifg=#80cbc4               gui=none ctermbg=none
 " You can use CTRL-] on this
-"hi Tag              guifg=#c792ea               gui=none ctermbg=none
+"hi Tag              guifg=#ff0000               gui=none ctermbg=none
 " Character that needs attention
 "hi Delimiter        guifg=#ff0000               gui=none ctermbg=none
 " Special things inside a comment
@@ -182,4 +182,22 @@ hi javaScriptParens        guifg=#cdd3de               gui=none ctermbg=none
 hi javaScriptOpSymbols     guifg=#d9f5dd               gui=none ctermbg=none
 hi javaScriptEndColons     guifg=#d9f5dd               gui=none ctermbg=none
 hi javaScriptLogicSymbols  guifg=#d9f5dd               gui=none ctermbg=none
+" }}}
+
+" HTML Highlighting "{{{
+" =================
+" Tags
+hi htmlTag              guifg=#80cbc4               gui=none ctermbg=none
+hi htmlTagN             guifg=#ff0000               gui=none ctermbg=none
+hi htmlEndTag           guifg=#80cbc4               gui=none ctermbg=none
+hi htmlTagName          guifg=#ff5370               gui=none ctermbg=none
+hi htmlSpecialTagName   guifg=#ff0000               gui=none ctermbg=none
+" }}}
+
+" Jinja Highlighting "{{{
+" ==================
+" Statements
+hi jinjaStatement       guifg=#c792ea               gui=none ctermbg=none
+hi jinjaVariable        guifg=#82b1ff               gui=none ctermbg=none
+hi jinjaString          guifg=#c3e88d               gui=none ctermbg=none
 " }}}
