@@ -125,7 +125,7 @@ hi Type             guifg=#c792ea               gui=none ctermbg=none
 " Any special symbol
 hi Special          guifg=#cdd3de               gui=none ctermbg=none
 " Special character in a constant
-"hi SpecialChar      guifg=#ff0000               gui=none ctermbg=none
+hi SpecialChar      guifg=#80cbc4               gui=none ctermbg=none
 " You can use CTRL-] on this
 "hi Tag              guifg=#c792ea               gui=none ctermbg=none
 " Character that needs attention
@@ -166,10 +166,15 @@ hi Special          guifg=#cdd3de               gui=none ctermbg=none
 " =======================
 " Statement Keywords
 hi javaScriptMessage       guifg=#80cbc4               gui=none ctermbg=none
+hi javaScriptNull          guifg=#f77669               gui=none ctermbg=none
+hi javaScriptEventListenerKeywords  guifg=#80cbc4      gui=none ctermbg=none
+hi javaScriptGlobalObjects  guifg=#ffcb6b              gui=none ctermbg=none
 
 " Function and arguments highlighting
 hi javaScriptFuncKeyword   guifg=#c792ea               gui=none ctermbg=none
 hi javaScriptFuncDef       guifg=#82b1ff               gui=none ctermbg=none
+hi javaScriptFuncExp       guifg=#ff0000               gui=none ctermbg=none
+hi javaScriptFunctionKey   guifg=#82b1ff               gui=none ctermbg=none
 
 " Braces, Parens, symbols, colons
 hi javaScriptBraces        guifg=#cdd3de               gui=none ctermbg=none
