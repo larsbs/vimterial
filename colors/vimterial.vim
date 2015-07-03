@@ -22,29 +22,32 @@ let colors_name="vimterial"
 
 
 hi Normal           guifg=#cdd3de guibg=#263238 gui=none ctermbg=none
-hi Cursor           guifg=#c0c5ce guibg=#c0c5ce gui=none ctermbg=none
-"hi CursorIM
+hi Cursor           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
+"hi CursorIM         guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
+"hi CursorColumn     guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
+"hi CursorLine       guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
 "hi Directory
 "hi DiffAdd
 "hi DiffChange
 "hi DiffDelete
 "hi DiffText
 "hi ErrorMsg
-"hi VertSplit
-"hi Folded
-"hi FoldColumn
+hi VertSplit        guifg=#32444d guibg=#263238 gui=none ctermbg=none
+hi Folded           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
+hi FoldColumn       guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 "hi IncSearch
 hi LineNr           guifg=#37474f               gui=none ctermbg=none
+hi MatchParen       guifg=#151b1e guibg=#707b8f gui=none ctermbg=none
 "hi ModeMsg
 "hi MoreMsg
 "hi NonText
 "hi Question
 "hi Search
 "hi SpecialKey
-"hi StatusLine
+"hi StatusLine       guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 "hi StatusLineNC
-"hi Title
-"hi Visual
+"hi Title            guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
+hi Visual           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 "hi VisualNOS
 "hi WarningMsg
 "hi WildMenu
