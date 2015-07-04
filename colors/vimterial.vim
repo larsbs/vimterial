@@ -25,8 +25,8 @@ hi Normal           guifg=#cdd3de guibg=#263238 gui=none ctermbg=none
 hi Cursor           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 "hi CursorIM         guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
 "hi CursorColumn     guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
-"hi CursorLine       guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
-"hi Directory
+hi CursorLine                     guibg=#1e282d gui=none ctermbg=none
+hi Directory        guifg=#80cbc4               gui=none ctermbg=none
 "hi DiffAdd
 "hi DiffChange
 "hi DiffDelete
@@ -40,7 +40,7 @@ hi LineNr           guifg=#37474f               gui=none ctermbg=none
 hi MatchParen       guifg=#151b1e guibg=#707b8f gui=none ctermbg=none
 "hi ModeMsg
 "hi MoreMsg
-"hi NonText
+hi NonText          guifg=#37474f               gui=none ctermbg=none
 "hi Question
 "hi Search
 "hi SpecialKey
@@ -228,4 +228,16 @@ hi lessDefinition          guifg=#ff00ff               gui=none ctermbg=none
 hi lessDefault             guifg=#ff00ff               gui=none ctermbg=none
 hi lessClass               guifg=#c3e88d               gui=none ctermbg=none
 hi lessAmpersandChar       guifg=#d9f5dd               gui=none ctermbg=none
+" }}}
+
+" NERDTree Highlighting "{{{
+" =====================
+" Highlighting for directory nodes and file nodes
+hi NERDTreeDirSlash        guifg=#afbdc4               gui=none ctermbg=none
+hi NERDTreeDir             guifg=#afbdc4               gui=bold ctermbg=none
+hi NERDTreeUp              guifg=#ff0000               gui=none ctermbg=none
+hi NERDTreeFile            guifg=#607d8b               gui=none ctermbg=none
+hi NERDTreeCWD             guifg=#80cbc4               gui=none ctermbg=none
+hi NERDTreeOpenable        guifg=#80cbc4               gui=none ctermbg=none
+hi NERDTreeClosable        guifg=#80cbc4               gui=none ctermbg=none
 " }}}
