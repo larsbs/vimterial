@@ -207,27 +207,33 @@ hi jinjaString          guifg=#c3e88d               gui=none ctermbg=none
 
 " CSS Highlighting "{{{
 " ================
-" Statements
+" Hail2u plugin
 hi cssProp               guifg=#80cbc4               gui=none ctermbg=none
 "hi cssAttr               guifg=#80cbc4               gui=none ctermbg=none
-hi cssTagName            guifg=#ff0000               gui=none ctermbg=none
-hi cssIdentifier         guifg=#ff0000               gui=none ctermbg=none
-hi cssDefinition         guifg=#ff0000               gui=none ctermbg=none
-hi cssPseudoClass        guifg=#ff0000               gui=none ctermbg=none
+hi cssTagName            guifg=#c792ea               gui=none ctermbg=none
+"hi cssIdentifier         guifg=#ff0000               gui=none ctermbg=none
+"hi cssDefinition         guifg=#ff0000               gui=none ctermbg=none
+"hi cssPseudoClass        guifg=#ff0000               gui=none ctermbg=none
 hi cssPseudoClassId      guifg=#c3e88d               gui=none ctermbg=none
 hi cssClassName          guifg=#c3e88d               gui=none ctermbg=none
 hi cssUIAttr             guifg=#80cbc4               gui=none ctermbg=none
 hi cssBoxProp            guifg=#80cbc4               gui=none ctermbg=none
+hi cssNoise              guifg=#cdd3de               gui=none ctermbg=none
+" JulesWang plugin
+hi cssBraces             guifg=#cdd3de               gui=none ctermbg=none
 " }}}
 
 " LESS Highlighting "{{{
 " =================
-" Statements
+" Groenewege plugin
 hi lessVariable            guifg=#ff5370               gui=none ctermbg=none
-hi lessDefinition          guifg=#ff00ff               gui=none ctermbg=none
-hi lessDefault             guifg=#ff00ff               gui=none ctermbg=none
+hi lessDefinition          guifg=#80cbc4               gui=none ctermbg=none
 hi lessClass               guifg=#c3e88d               gui=none ctermbg=none
 hi lessAmpersandChar       guifg=#d9f5dd               gui=none ctermbg=none
+" Genoma plugin
+hi lessAmpersand           guifg=#d9f5dd               gui=none ctermbg=none
+hi lessClassChar           guifg=#c3e88d               gui=none ctermbg=none
+hi lessFunction            guifg=#c3e88d               gui=none ctermbg=none
 " }}}
 
 " NERDTree Highlighting "{{{
