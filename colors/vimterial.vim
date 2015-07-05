@@ -44,7 +44,6 @@ function! CustomHighlighter(name, ...)
                 let command .= ' ' . colour_order[i] . '=' . s:color
             endif
         endfor
-        echo command
         exe command
     endif
 endfunc
@@ -56,19 +55,23 @@ let s:none              = 'NONE'
 let s:ignore            = 'ignore'
 let s:testing           = '#CDFF00'
 
-let s:darkest_dark_blue = '#1e282d'
+let s:darkest_grey_blue = '#1e282d'
 let s:darker_grey_blue  = '#263238'
 let s:dark_grey_blue    = '#37474f'
-let s:grey_blue         = '#c0c5ce'
+let s:grey_blue         = '#546e7a'
+let s:light_grey_blue   = '#c0c5ce'
 let s:lighter_grey_blue = '#cdd3de'
 
 let s:accent_teal       = '#80cbc4'
+
+let s:light_blue        = '#82b1ff'
+let s:soft_red          = '#f77669'
 " }}}
 
 " GENERAL "{{{
 " =======
 Hi Normal               s:lighter_grey_blue  s:darker_grey_blue
-Hi Cursor               s:darker_grey_blue   s:grey_blue
+Hi Cursor               s:darker_grey_blue   s:light_grey_blue
 "hi CursorIM
 "hi CursorColumn
 Hi CursorLine           s:ignore             s:darkest_grey_blue
@@ -78,24 +81,24 @@ Hi Directory            s:accent_teal        s:ignore
 "hi DiffDelete
 "hi DiffText
 "hi ErrorMsg
-Hi VertSplit            s:dark_grey_blue     s:darker_grey_blue
-hi Folded           guifg=#263238 guibg=#546e7a gui=none ctermbg=none
-hi FoldColumn       guifg=#263238 guibg=#546e7a gui=none ctermbg=none
+Hi VertSplit            s:darker_grey_blue   s:dark_grey_blue
+Hi Folded               s:darker_grey_blue   s:grey_blue
+Hi FoldedColumn         s:darker_grey_blue   s:grey_blue
 "hi IncSearch
-hi LineNr           guifg=#37474f               gui=none ctermbg=none
-hi MatchParen       guifg=#151b1e guibg=#707b8f gui=none ctermbg=none
+Hi LineNr               s:dark_grey_blue     s:ignore
+Hi MatchParen           s:darkest_grey_blue  s:grey_blue
 "hi ModeMsg
 "hi MoreMsg
-hi NonText          guifg=#37474f               gui=none ctermbg=none
+Hi NonText              s:dark_grey_blue     s:ignore
 "hi Question
 "hi Search
 "hi SpecialKey
-"hi StatusLine       guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
+"hi StatusLine
 "hi StatusLineNC
-hi Title            guifg=#82b1ff               gui=bold ctermbg=none
-hi Visual           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
+Hi Title                s:light_blue         s:ignore
+Hi Visual               s:darker_grey_blue   s:light_grey_blue
 "hi VisualNOS
-hi WarningMsg       guifg=#f77669               gui=none ctermbg=none
+Hi WarningMsg           s:soft_red           s:ignore
 "hi WildMenu
 "hi Menu
 "hi Scrollbar
