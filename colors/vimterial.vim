@@ -1,11 +1,8 @@
 " Vim color file
-" Maintainer:   Your name <youremail@something.com>
+" Maintainer:   Lorenzo Ruiz <lars@sindrosoft.com>
 " Last Change:
-" URL:
+" URL: https://github.com/larsbs/vimterial
 
-" cool help screens
-" :he highlight-groups
-" :he cterm-colors
 
 set background=dark
 
@@ -49,7 +46,7 @@ hi NonText          guifg=#37474f               gui=none ctermbg=none
 "hi Title            guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 hi Visual           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 "hi VisualNOS
-"hi WarningMsg
+hi WarningMsg       guifg=#f77669               gui=none ctermbg=none
 "hi WildMenu
 "hi Menu
 "hi Scrollbar
