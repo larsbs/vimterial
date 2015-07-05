@@ -4,6 +4,9 @@
 " URL: https://github.com/larsbs/vimterial
 
 
+
+" CONFIGURATION "{{{
+" =============
 set background=dark
 
 
@@ -16,7 +19,12 @@ endif
 
 
 let colors_name="vimterial"
+" }}}
 
+" COLORS "{{{
+" =============
+"
+" }}}
 
 " GENERAL "{{{
 " =======
@@ -235,6 +243,14 @@ hi lessAmpersandChar       guifg=#d9f5dd               gui=none ctermbg=none
 hi lessAmpersand           guifg=#d9f5dd               gui=none ctermbg=none
 hi lessClassChar           guifg=#c3e88d               gui=none ctermbg=none
 hi lessFunction            guifg=#c3e88d               gui=none ctermbg=none
+" }}}
+
+" SH Highlighting "{{{
+" ===============
+" Statements
+hi shStatement            guifg=#c792ea               gui=none ctermbg=none
+hi shTestOpr              guifg=#d9f5dd               gui=none ctermbg=none
+hi link shVariable Function
 " }}}
 
 " NERDTree Highlighting "{{{
