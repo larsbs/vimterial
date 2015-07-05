@@ -9,22 +9,57 @@
 " =============
 set background=dark
 
-
 hi clear
-
 
 if exists("syntax_on")
     syntax reset
 endif
 
-
 let colors_name="vimterial"
 " }}}
 
-" COLORS "{{{
+" UTILS "{{{
 " =============
-"
+function! RemoveNewlines(string)
+    return substitute(a:string, '\n', '', 'g')
+endfunction
+
+" Custom Hi command that accepts colors as variables.
+" Usage -> Hi [group] [guifg_color] [guibg_colors]
+command! -nargs=+ Hi call CustomHighlighter(<f-args>)
+function! CustomHighlighter(name, ...)
+    let colour_order = ['guifg', 'guibg']
+    let command = 'hi ' . a:name
+    if (len(a:000) < 1) || (len(a:000) > (len(colour_order)))
+        echoerr "No colour or too many colours specified"
+    else
+        for i in range(0,len(a:000)-1)
+            " Extract the color from the variable. If we don't do
+            " this, then, the variable is parsed as a string and
+            " we get a color asignation error.
+            redir => s:color
+            silent exe 'echo '.a:000[i]
+            redir END
+            let command .= ' ' . colour_order[i] . '=' . RemoveNewlines(s:color)
+        endfor
+        exe command
+    endif
+endfunc
 " }}}
+
+" COLORS "{{{
+" =======
+let s:lighter_grey_blue = '#cdd3de'
+let s:darker_grey_blue = '#263238'
+
+" Foregrounds
+let s:fg_lighter_grey_blue = 'guifg='.s:lighter_grey_blue
+
+" Backgrounds
+let s:bg_darker_grey_blue = 'guibg='.s:darker_grey_blue
+" }}}
+
+Hi Normal s:lighter_grey_blue s:darker_grey_blue
 
 " GENERAL "{{{
 " =======
@@ -177,23 +212,21 @@ hi SpecialChar      guifg=#80cbc4               gui=none ctermbg=none
 " JavaScript Highlighting "{{{
 " =======================
 " Statement Keywords
-hi javaScriptMessage       guifg=#80cbc4               gui=none ctermbg=none
-hi javaScriptNull          guifg=#f77669               gui=none ctermbg=none
+hi javaScriptMessage                guifg=#80cbc4               gui=none ctermbg=none
+hi javaScriptNull                   guifg=#f77669               gui=none ctermbg=none
 hi javaScriptEventListenerKeywords  guifg=#80cbc4      gui=none ctermbg=none
-hi javaScriptGlobalObjects  guifg=#ffcb6b              gui=none ctermbg=none
-
+hi javaScriptGlobalObjects          guifg=#ffcb6b              gui=none ctermbg=none
 " Function and arguments highlighting
-hi javaScriptFuncKeyword   guifg=#c792ea               gui=none ctermbg=none
-hi javaScriptFuncDef       guifg=#82b1ff               gui=none ctermbg=none
-hi javaScriptFuncExp       guifg=#ff0000               gui=none ctermbg=none
-hi javaScriptFunctionKey   guifg=#82b1ff               gui=none ctermbg=none
-
+hi javaScriptFuncKeyword            guifg=#c792ea               gui=none ctermbg=none
+hi javaScriptFuncDef                guifg=#82b1ff               gui=none ctermbg=none
+hi javaScriptFuncExp                guifg=#ff0000               gui=none ctermbg=none
+hi javaScriptFunctionKey            guifg=#82b1ff               gui=none ctermbg=none
 " Braces, Parens, symbols, colons
-hi javaScriptBraces        guifg=#cdd3de               gui=none ctermbg=none
-hi javaScriptParens        guifg=#cdd3de               gui=none ctermbg=none
-hi javaScriptOpSymbols     guifg=#d9f5dd               gui=none ctermbg=none
-hi javaScriptEndColons     guifg=#d9f5dd               gui=none ctermbg=none
-hi javaScriptLogicSymbols  guifg=#d9f5dd               gui=none ctermbg=none
+hi javaScriptBraces                 guifg=#cdd3de               gui=none ctermbg=none
+hi javaScriptParens                 guifg=#cdd3de               gui=none ctermbg=none
+hi javaScriptOpSymbols              guifg=#d9f5dd               gui=none ctermbg=none
+hi javaScriptEndColons              guifg=#d9f5dd               gui=none ctermbg=none
+hi javaScriptLogicSymbols           guifg=#d9f5dd               gui=none ctermbg=none
 " }}}
 
 " HTML Highlighting "{{{
