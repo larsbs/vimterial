@@ -66,6 +66,9 @@ let s:accent_teal       = '#80cbc4'
 
 let s:light_blue        = '#82b1ff'
 let s:soft_red          = '#f77669'
+let s:soft_green        = '#c3e88d'
+let s:soft_violet       = '#c792ea'
+let s:soft_lime_green   = '#d9f5dd'
 " }}}
 
 " GENERAL "{{{
@@ -111,75 +114,75 @@ Hi WarningMsg           s:soft_red           s:ignore
 " COMMENTS "{{{
 " ========
 " Any comment
-hi Comment          guifg=#546e7a               gui=none ctermbg=none
+Hi Comment              s:grey_blue          s:ignore
 " }}}
 
 " CONSTANTS "{{{
 " =========
 " Any constant
-hi Constant         guifg=#f77669               gui=none ctermbg=none
+Hi Constant             s:soft_red           s:ignore
 " A string constant
-hi String           guifg=#c3e88d               gui=none ctermbg=none
+Hi String               s:soft_green         s:ignore
 " }}}
 
 " IDENTIFIERS "{{{
 " ===========
 " Any variable name
-hi Identifier       guifg=#c792ea               gui=none ctermbg=none
+Hi Identifier           s:soft_violet        s:ignore
 " Function name (also: methods for classes)
-hi Function         guifg=#82b1ff               gui=none ctermbg=none
+Hi Function             s:light_blue         s:ignore
 " }}}
 
 " STATEMENTS "{{{
 " ==========
 " Any statement
-hi Statement        guifg=#c792ea               gui=none ctermbg=none
+Hi Statement            s:soft_violet        s:ignore
 " if, then, else, endif, switch, etc.
-"hi Conditional      guifg=#c792ea               gui=none ctermbg=none
+"hi Conditional
 " for, do, while, etc.
-"hi Repeat           guifg=#c792ea               gui=none ctermbg=none
+"hi Repeat
 " case, default, etc.
-"hi Label            guifg=#c792ea               gui=none ctermbg=none
+"hi Label
 " sizeof, +, *, etc.
-hi Operator         guifg=#d9f5dd               gui=none ctermbg=none
+Hi Operator             s:soft_lime_green    s:ignore
 " Any other keyword
-"hi Keyword          guifg=#ff0000               gui=none ctermbg=none
+"hi Keyword
 " Try, catch, throw
-"hi Exception        guifg=#c792ea               gui=none ctermbg=none
+"hi Exception
 " }}}
 
 " PREPROCS "{{{
 " ========
 " Generic preprocessor
-hi PreProc          guifg=#c792ea               gui=none ctermbg=none
+Hi PreProc              s:soft_violet        s:ignore
 " Preprocessor #include
-"hi Include          guifg=#c792ea               gui=none ctermbg=none
+"hi Include
 " Preprocessor #define
-"hi Define           guifg=#c792ea               gui=none ctermbg=none
+"hi Define
 " Same as define
-"hi Macro            guifg=#c792ea               gui=none ctermbg=none
+"hi Macro
 " Preprocessor #if, #else, #endif, etc.
-"hi PreCondit        guifg=#c792ea               gui=none ctermbg=none
+"hi PreCondit
 " }}}
 
 " TYPES "{{{
 " =====
 " int, long, char, etc.
-hi Type             guifg=#c792ea               gui=none ctermbg=none
+Hi Type                 s:soft_violet        s:ignore
 " static, register, volatile, etc.
-"hi StorageClass     guifg=#c792ea               gui=none ctermbg=none
+"hi StorageClass
 " struct, union, enum, etc.
-"hi Structure        guifg=#ff0000               gui=none ctermbg=none
+"hi Structure
 " a typedef
-"hi Typedef          guifg=#ff0000               gui=none ctermbg=none
+"hi Typedef
 " }}}
 
 " SPECIALS "{{{
 " ========
 " Any special symbol
-hi Special          guifg=#cdd3de               gui=none ctermbg=none
+Hi Special              s:lighter_grey_blue  s:ignore
 " Special character in a constant
-hi SpecialChar      guifg=#80cbc4               gui=none ctermbg=none
+Hi SpecialChar          s:accent_teal        s:ignore
 " You can use CTRL-] on this
 "hi Tag              guifg=#ff0000               gui=none ctermbg=none
 " Character that needs attention
