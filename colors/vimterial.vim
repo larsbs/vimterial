@@ -69,6 +69,7 @@ let s:soft_red          = '#f77669'
 let s:soft_green        = '#c3e88d'
 let s:soft_violet       = '#c792ea'
 let s:soft_lime_green   = '#d9f5dd'
+let s:soft_orange       = '#ffcb6b'
 " }}}
 
 " GENERAL "{{{
@@ -179,55 +180,55 @@ Hi Type                 s:soft_violet        s:ignore
 
 " SPECIALS "{{{
 " ========
-" Any special symbol
+" Any special symbol (ex: [, ], (, ), etc.)
 Hi Special              s:lighter_grey_blue  s:ignore
-" Special character in a constant
+" Special character in a constant (ex: \n, %s, etc.)
 Hi SpecialChar          s:accent_teal        s:ignore
 " You can use CTRL-] on this
-"hi Tag              guifg=#ff0000               gui=none ctermbg=none
+"hi Tag
 " Character that needs attention
-"hi Delimiter        guifg=#ff0000               gui=none ctermbg=none
+"hi Delimiter
 " Special things inside a comment
-"hi SpecialComment   guifg=#c792ea               gui=none ctermbg=none
+"hi SpecialComment
 " Debugging statements
-"hi Debug            guifg=#c792ea               gui=none ctermbg=none
+"hi Debug
 " }}}
 
 " UNDERLINEDS "{{{
 " ===========
 " Text that stands out, HTML links
-"hi Underlined       guifg=#c792ea               gui=none ctermbg=none
+"hi Underlined
 " }}}
 
 " IGNORES "{{{
 " =======
 " Left blank, hidden hl-Ignore
-"hi Ignore           guifg=#c792ea               gui=none ctermbg=none
+"hi Ignore
 " }}}
 
 " ERRORS "{{{
 " ======
 " Any erroneous construct
-"hi Error            guifg=#c792ea               gui=none ctermbg=none
+"hi Error
 " }}}
 
 " TODOS "{{{
 " =====
 " Anything that needs extra attention; mostly the kewords
 " TODO FIXME and XXX
-"hi Todo             guifg=#c792ea               gui=none ctermbg=none
+"hi Todo
 " }}}
 
 
 " JavaScript Highlighting "{{{
 " =======================
 " Statement Keywords
-hi javaScriptMessage                guifg=#80cbc4               gui=none ctermbg=none
-hi javaScriptNull                   guifg=#f77669               gui=none ctermbg=none
-hi javaScriptEventListenerKeywords  guifg=#80cbc4      gui=none ctermbg=none
-hi javaScriptGlobalObjects          guifg=#ffcb6b              gui=none ctermbg=none
+Hi javaScriptMessage                      s:accent_teal       s:ignore
+hi link javaScriptNull                    Constant
+hi link javaScriptEventListenerKeywords   javaScriptMessage
+Hi javaScriptGlobalObjects                s:soft_orange       s:ignore
 " Function and arguments highlighting
-hi javaScriptFuncKeyword            guifg=#c792ea               gui=none ctermbg=none
+hi link javaScriptFuncKeyword             Identifier
 hi javaScriptFuncDef                guifg=#82b1ff               gui=none ctermbg=none
 hi javaScriptFuncExp                guifg=#ff0000               gui=none ctermbg=none
 hi javaScriptFunctionKey            guifg=#82b1ff               gui=none ctermbg=none
