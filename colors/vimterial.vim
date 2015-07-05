@@ -4,7 +4,6 @@
 " URL: https://github.com/larsbs/vimterial
 
 
-
 " CONFIGURATION "{{{
 " =============
 set background=dark
@@ -33,15 +32,19 @@ function! CustomHighlighter(name, ...)
     if (len(a:000) < 1) || (len(a:000) > (len(colour_order)))
         echoerr "No colour or too many colours specified"
     else
-        for i in range(0,len(a:000)-1)
+        for i in range(0, len(a:000) - 1)
             " Extract the color from the variable. If we don't do
             " this, then, the variable is parsed as a string and
             " we get a color asignation error.
             redir => s:color
             silent exe 'echo '.a:000[i]
             redir END
-            let command .= ' ' . colour_order[i] . '=' . RemoveNewlines(s:color)
+            let s:color = RemoveNewlines(s:color)
+            if s:color != 'ignore'
+                let command .= ' ' . colour_order[i] . '=' . s:color
+            endif
         endfor
+        echo command
         exe command
     endif
 endfunc
@@ -49,32 +52,33 @@ endfunc
 
 " COLORS "{{{
 " =======
+let s:none              = 'NONE'
+let s:ignore            = 'ignore'
+let s:testing           = '#CDFF00'
+
+let s:darkest_dark_blue = '#1e282d'
+let s:darker_grey_blue  = '#263238'
+let s:dark_grey_blue    = '#37474f'
+let s:grey_blue         = '#c0c5ce'
 let s:lighter_grey_blue = '#cdd3de'
-let s:darker_grey_blue = '#263238'
 
-" Foregrounds
-let s:fg_lighter_grey_blue = 'guifg='.s:lighter_grey_blue
-
-" Backgrounds
-let s:bg_darker_grey_blue = 'guibg='.s:darker_grey_blue
+let s:accent_teal       = '#80cbc4'
 " }}}
-
-Hi Normal s:lighter_grey_blue s:darker_grey_blue
 
 " GENERAL "{{{
 " =======
-hi Normal           guifg=#cdd3de guibg=#263238 gui=none ctermbg=none
-hi Cursor           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
-"hi CursorIM         guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
-"hi CursorColumn     guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
-hi CursorLine                     guibg=#1e282d gui=none ctermbg=none
-hi Directory        guifg=#80cbc4               gui=none ctermbg=none
+Hi Normal               s:lighter_grey_blue  s:darker_grey_blue
+Hi Cursor               s:darker_grey_blue   s:grey_blue
+"hi CursorIM
+"hi CursorColumn
+Hi CursorLine           s:ignore             s:darkest_grey_blue
+Hi Directory            s:accent_teal        s:ignore
 "hi DiffAdd
 "hi DiffChange
 "hi DiffDelete
 "hi DiffText
 "hi ErrorMsg
-hi VertSplit        guifg=#32444d guibg=#263238 gui=none ctermbg=none
+Hi VertSplit            s:dark_grey_blue     s:darker_grey_blue
 hi Folded           guifg=#263238 guibg=#546e7a gui=none ctermbg=none
 hi FoldColumn       guifg=#263238 guibg=#546e7a gui=none ctermbg=none
 "hi IncSearch
