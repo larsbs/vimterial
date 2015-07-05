@@ -18,6 +18,8 @@ endif
 let colors_name="vimterial"
 
 
+" GENERAL "{{{
+" =======
 hi Normal           guifg=#cdd3de guibg=#263238 gui=none ctermbg=none
 hi Cursor           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 "hi CursorIM         guifg=#263238 guibg=#ff0000 gui=none ctermbg=none
@@ -30,8 +32,8 @@ hi Directory        guifg=#80cbc4               gui=none ctermbg=none
 "hi DiffText
 "hi ErrorMsg
 hi VertSplit        guifg=#32444d guibg=#263238 gui=none ctermbg=none
-hi Folded           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
-hi FoldColumn       guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
+hi Folded           guifg=#263238 guibg=#546e7a gui=none ctermbg=none
+hi FoldColumn       guifg=#263238 guibg=#546e7a gui=none ctermbg=none
 "hi IncSearch
 hi LineNr           guifg=#37474f               gui=none ctermbg=none
 hi MatchParen       guifg=#151b1e guibg=#707b8f gui=none ctermbg=none
@@ -43,7 +45,7 @@ hi NonText          guifg=#37474f               gui=none ctermbg=none
 "hi SpecialKey
 "hi StatusLine       guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 "hi StatusLineNC
-"hi Title            guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
+hi Title            guifg=#82b1ff               gui=bold ctermbg=none
 hi Visual           guifg=#263238 guibg=#c0c5ce gui=none ctermbg=none
 "hi VisualNOS
 hi WarningMsg       guifg=#f77669               gui=none ctermbg=none
@@ -51,6 +53,8 @@ hi WarningMsg       guifg=#f77669               gui=none ctermbg=none
 "hi Menu
 "hi Scrollbar
 "hi Tooltip
+" }}}
+
 
 " Syntax Highlighting Groups (see :he group-name)
 
