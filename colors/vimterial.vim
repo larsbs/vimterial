@@ -229,15 +229,15 @@ hi link javaScriptEventListenerKeywords   javaScriptMessage
 Hi javaScriptGlobalObjects                s:soft_orange       s:ignore
 " Function and arguments highlighting
 hi link javaScriptFuncKeyword             Identifier
-hi javaScriptFuncDef                guifg=#82b1ff               gui=none ctermbg=none
-hi javaScriptFuncExp                guifg=#ff0000               gui=none ctermbg=none
-hi javaScriptFunctionKey            guifg=#82b1ff               gui=none ctermbg=none
+hi link javaScriptFuncDef                 Function
+Hi javaScriptFuncExp                      s:testing           s:ignore
+hi link javaScriptFunctionKey             javaScriptFuncDef
 " Braces, Parens, symbols, colons
-hi javaScriptBraces                 guifg=#cdd3de               gui=none ctermbg=none
-hi javaScriptParens                 guifg=#cdd3de               gui=none ctermbg=none
-hi javaScriptOpSymbols              guifg=#d9f5dd               gui=none ctermbg=none
-hi javaScriptEndColons              guifg=#d9f5dd               gui=none ctermbg=none
-hi javaScriptLogicSymbols           guifg=#d9f5dd               gui=none ctermbg=none
+hi link javaScriptBraces                  Normal
+hi link javaScriptParens                  Normal
+hi link javaScriptOpSymbols               Operator
+hi link javaScriptEndColons               Normal
+hi link javaScriptLogicSymbols            Operator
 " }}}
 
 " HTML Highlighting "{{{
