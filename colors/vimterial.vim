@@ -70,6 +70,7 @@ let s:soft_green        = '#c3e88d'
 let s:soft_violet       = '#c792ea'
 let s:soft_lime_green   = '#d9f5dd'
 let s:soft_orange       = '#ffcb6b'
+let s:light_red         = '#ff5370'
 " }}}
 
 " GENERAL "{{{
@@ -243,11 +244,12 @@ hi link javaScriptLogicSymbols            Operator
 " HTML Highlighting "{{{
 " =================
 " Tags
-hi htmlTag              guifg=#80cbc4               gui=none ctermbg=none
-hi htmlTagN             guifg=#ff0000               gui=none ctermbg=none
-hi htmlEndTag           guifg=#80cbc4               gui=none ctermbg=none
-hi htmlTagName          guifg=#ff5370               gui=none ctermbg=none
-hi htmlSpecialTagName   guifg=#ff0000               gui=none ctermbg=none
+Hi htmlTag                                s:accent_teal       s:ignore
+Hi htmlTagN                               s:testing           s:ignore
+hi link htmlEndTag                        htmlTag
+hi link htmlArg                           Normal
+Hi htmlTagName                            s:light_red         s:ignore
+Hi htmlSpecialTagName                     s:testing           s:ignore
 " }}}
 
 " Jinja Highlighting "{{{
