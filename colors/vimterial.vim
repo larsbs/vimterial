@@ -244,20 +244,20 @@ hi link javaScriptLogicSymbols            Operator
 " HTML Highlighting "{{{
 " =================
 " Tags
-Hi htmlTag                                s:accent_teal       s:ignore
-Hi htmlTagN                               s:testing           s:ignore
-hi link htmlEndTag                        htmlTag
-hi link htmlArg                           Normal
-Hi htmlTagName                            s:light_red         s:ignore
-Hi htmlSpecialTagName                     s:testing           s:ignore
+Hi htmlTag                   s:accent_teal       s:ignore
+Hi htmlTagN                  s:testing           s:ignore
+hi link htmlEndTag           htmlTag
+hi link htmlArg              Normal
+Hi htmlTagName               s:light_red         s:ignore
+Hi htmlSpecialTagName        s:testing           s:ignore
 " }}}
 
 " Jinja Highlighting "{{{
 " ==================
 " Statements
-hi jinjaStatement       guifg=#c792ea               gui=none ctermbg=none
-hi jinjaVariable        guifg=#82b1ff               gui=none ctermbg=none
-hi jinjaString          guifg=#c3e88d               gui=none ctermbg=none
+hi link jinjaStatement       Statement
+Hi jinjaVariable             s:light_blue        s:ignore
+hi link jinjaString          String
 " }}}
 
 " CSS Highlighting "{{{
