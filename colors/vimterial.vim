@@ -249,7 +249,7 @@ Hi htmlTagN                  s:testing           s:ignore
 hi link htmlEndTag           htmlTag
 hi link htmlArg              Normal
 Hi htmlTagName               s:light_red         s:ignore
-Hi htmlSpecialTagName        s:testing           s:ignore
+hi link htmlSpecialTagName   htmlTagName
 " }}}
 
 " Jinja Highlighting "{{{
