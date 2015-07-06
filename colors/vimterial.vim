@@ -231,7 +231,7 @@ Hi javaScriptGlobalObjects                s:soft_orange       s:ignore
 " Function and arguments highlighting
 hi link javaScriptFuncKeyword             Identifier
 hi link javaScriptFuncDef                 Function
-Hi javaScriptFuncExp                      s:testing           s:ignore
+hi link javaScriptFuncExp                 javaScriptFuncDef
 hi link javaScriptFunctionKey             javaScriptFuncDef
 " Braces, Parens, symbols, colons
 hi link javaScriptBraces                  Normal
