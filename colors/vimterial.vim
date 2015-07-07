@@ -28,7 +28,7 @@ endfunction
 command! -nargs=+ Hi call CustomHighlighter(<f-args>)
 function! CustomHighlighter(name, ...)
     let colour_order = ['guifg', 'guibg']
-    let command = 'hi ' . a:name
+    let command = 'hi! ' . a:name
     if (len(a:000) < 1) || (len(a:000) > (len(colour_order)))
         echoerr "No colour or too many colours specified"
     else
@@ -63,9 +63,11 @@ let s:light_grey_blue   = '#c0c5ce'
 let s:lighter_grey_blue = '#cdd3de'
 
 let s:accent_teal       = '#80cbc4'
+let s:search_yellow     = '#f8e71c'
 
 let s:light_blue        = '#82b1ff'
 let s:soft_red          = '#f77669'
+let s:dark_soft_red     = '#802920'
 let s:soft_green        = '#c3e88d'
 let s:soft_violet       = '#c792ea'
 let s:soft_lime_green   = '#d9f5dd'
@@ -76,38 +78,44 @@ let s:light_red         = '#ff5370'
 " GENERAL "{{{
 " =======
 Hi Normal               s:lighter_grey_blue  s:darker_grey_blue
+"Hi ColorColumn          s:testing            s:testing
 Hi Cursor               s:darker_grey_blue   s:light_grey_blue
 "hi CursorIM
-"hi CursorColumn
+Hi CursorColumn         s:ignore             s:darkest_grey_blue
 Hi CursorLine           s:ignore             s:darkest_grey_blue
 Hi Directory            s:accent_teal        s:ignore
-"hi DiffAdd
-"hi DiffChange
-"hi DiffDelete
-"hi DiffText
-"hi ErrorMsg
+Hi DiffAdd              s:soft_green         s:darkest_grey_blue
+hi DiffAdd              gui=bold
+Hi DiffChange           s:soft_orange        s:darkest_grey_blue
+hi DiffChange           gui=bold
+Hi DiffDelete           s:soft_red           s:darkest_grey_blue
+Hi DiffText             s:light_blue         s:darkest_grey_blue
+Hi ErrorMsg             s:darker_grey_blue   s:soft_red
+hi ErrorMsg             gui=none
 Hi VertSplit            s:darker_grey_blue   s:dark_grey_blue
 Hi Folded               s:darker_grey_blue   s:grey_blue
 Hi FoldedColumn         s:darker_grey_blue   s:grey_blue
-"hi IncSearch
+Hi SignColumn           s:dark_grey_blue     s:ignore
+Hi IncSearch            s:search_yellow      s:darkest_grey_blue
 Hi LineNr               s:dark_grey_blue     s:ignore
 Hi MatchParen           s:darkest_grey_blue  s:grey_blue
-"hi ModeMsg
-"hi MoreMsg
+Hi ModeMsg              s:light_grey_blue    s:none
+"Hi MoreMsg              s:testing            s:testing
 Hi NonText              s:dark_grey_blue     s:ignore
-"hi Question
-"hi Search
-"hi SpecialKey
-"hi StatusLine
-"hi StatusLineNC
+Hi Question             s:light_grey_blue    s:none
+hi Question             gui=none
+Hi Search               s:darkest_grey_blue  s:search_yellow
+Hi SpecialKey           s:testing            s:testing
+"Hi StatusLine           s:testing            s:testing
+"Hi StatusLineNC         s:testing            s:testing
 Hi Title                s:light_blue         s:ignore
 Hi Visual               s:darker_grey_blue   s:light_grey_blue
-"hi VisualNOS
+Hi VisualNOS            s:testing            s:testing
 Hi WarningMsg           s:soft_red           s:ignore
-"hi WildMenu
-"hi Menu
-"hi Scrollbar
-"hi Tooltip
+Hi WildMenu             s:testing            s:testing
+Hi Menu                 s:testing            s:testing
+Hi Scrollbar            s:testing            s:testing
+Hi Tooltip              s:testing            s:testing
 " }}}
 
 
@@ -217,7 +225,8 @@ Hi SpecialChar          s:accent_teal        s:ignore
 " =====
 " Anything that needs extra attention; mostly the kewords
 " TODO FIXME and XXX
-"hi Todo
+Hi Todo                 s:accent_teal    s:none
+hi Todo                 gui=bold
 " }}}
 
 
@@ -262,20 +271,21 @@ hi link jinjaString          String
 
 " CSS Highlighting "{{{
 " ================
-" Hail2u plugin
-hi cssProp               guifg=#80cbc4               gui=none ctermbg=none
-"hi cssAttr               guifg=#80cbc4               gui=none ctermbg=none
-hi cssTagName            guifg=#c792ea               gui=none ctermbg=none
-"hi cssIdentifier         guifg=#ff0000               gui=none ctermbg=none
-"hi cssDefinition         guifg=#ff0000               gui=none ctermbg=none
-"hi cssPseudoClass        guifg=#ff0000               gui=none ctermbg=none
-hi cssPseudoClassId      guifg=#c3e88d               gui=none ctermbg=none
-hi cssClassName          guifg=#c3e88d               gui=none ctermbg=none
-hi cssUIAttr             guifg=#80cbc4               gui=none ctermbg=none
-hi cssBoxProp            guifg=#80cbc4               gui=none ctermbg=none
-hi cssNoise              guifg=#cdd3de               gui=none ctermbg=none
+" Common
+Hi cssProp                  s:accent_teal       s:ignore
+"hi cssAttr
+hi link cssTagName          Statement
+"hi cssIdentifier
+"hi cssDefinition
+Hi cssClassName             s:soft_green        s:ignore
+hi link cssPseudoClass      cssClassName
+hi link cssPseudoClassId    cssClassName
+hi link cssNoise            Normal
+" Hail2u Plugin
+"hi cssUIAttr
+"hi cssBoxProp
 " JulesWang plugin
-hi cssBraces             guifg=#cdd3de               gui=none ctermbg=none
+hi link cssBraces           Normal
 " }}}
 
 " LESS Highlighting "{{{
