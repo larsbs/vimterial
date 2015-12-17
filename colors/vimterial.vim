@@ -112,9 +112,9 @@ Hi Title                s:light_blue         s:ignore
 Hi Visual               s:darker_grey_blue   s:light_grey_blue
 "Hi VisualNOS            s:testing            s:testing
 Hi WarningMsg           s:soft_red           s:ignore
-"Hi WildMenu             s:testing            s:testing
-"Hi Menu                 s:testing            s:testing
-"Hi Scrollbar            s:testing            s:testing
+Hi WildMenu             s:testing            s:testing
+Hi Menu                 s:testing            s:testing
+Hi Scrollbar            s:testing            s:testing
 Hi Tooltip              s:testing            s:testing
 " }}}
 
