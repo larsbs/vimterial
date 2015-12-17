@@ -105,16 +105,16 @@ Hi NonText              s:dark_grey_blue     s:ignore
 Hi Question             s:light_grey_blue    s:none
 hi Question             gui=none
 Hi Search               s:darkest_grey_blue  s:search_yellow
-Hi SpecialKey           s:testing            s:testing
+"Hi SpecialKey           s:testing            s:testing
 "Hi StatusLine           s:testing            s:testing
 "Hi StatusLineNC         s:testing            s:testing
 Hi Title                s:light_blue         s:ignore
 Hi Visual               s:darker_grey_blue   s:light_grey_blue
-Hi VisualNOS            s:testing            s:testing
+"Hi VisualNOS            s:testing            s:testing
 Hi WarningMsg           s:soft_red           s:ignore
-Hi WildMenu             s:testing            s:testing
-Hi Menu                 s:testing            s:testing
-Hi Scrollbar            s:testing            s:testing
+"Hi WildMenu             s:testing            s:testing
+"Hi Menu                 s:testing            s:testing
+"Hi Scrollbar            s:testing            s:testing
 Hi Tooltip              s:testing            s:testing
 " }}}
 
