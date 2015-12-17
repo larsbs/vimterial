@@ -232,91 +232,29 @@ hi Todo                 gui=bold
 
 " JavaScript Highlighting "{{{
 " =======================
-" Statement Keywords
-Hi javaScriptMessage                      s:accent_teal       s:ignore
-hi link javaScriptNull                    Constant
-hi link javaScriptEventListenerKeywords   javaScriptMessage
-Hi javaScriptGlobalObjects                s:soft_orange       s:ignore
-" Function and arguments highlighting
-hi link javaScriptFuncKeyword             Identifier
-hi link javaScriptFuncDef                 Function
-hi link javaScriptFuncExp                 javaScriptFuncDef
-hi link javaScriptFunctionKey             javaScriptFuncDef
-" Braces, Parens, symbols, colons
-hi link javaScriptBraces                  Normal
-hi link javaScriptParens                  Normal
-hi link javaScriptOpSymbols               Operator
-hi link javaScriptEndColons               Normal
-hi link javaScriptLogicSymbols            Operator
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/javascript/vim-javascript-syntax.vim"
 " }}}
-
 " HTML Highlighting "{{{
 " =================
-" Tags
-Hi htmlTag                   s:accent_teal       s:ignore
-Hi htmlTagN                  s:testing           s:ignore
-hi link htmlEndTag           htmlTag
-hi link htmlArg              Normal
-Hi htmlTagName               s:light_red         s:ignore
-hi link htmlSpecialTagName   htmlTagName
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/html/html5.vim"
 " }}}
-
 " Jinja Highlighting "{{{
 " ==================
-" Statements
-hi link jinjaStatement       Statement
-Hi jinjaVariable             s:light_blue        s:ignore
-hi link jinjaString          String
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/jinja/vim-jinja2-syntax.vim"
 " }}}
-
 " CSS Highlighting "{{{
 " ================
-" Common
-Hi cssProp                  s:accent_teal       s:ignore
-"hi cssAttr
-hi link cssTagName          Statement
-"hi cssIdentifier
-"hi cssDefinition
-Hi cssClassName             s:soft_green        s:ignore
-hi link cssPseudoClass      cssClassName
-hi link cssPseudoClassId    cssClassName
-hi link cssNoise            Normal
-" Hail2u Plugin
-"hi cssUIAttr
-"hi cssBoxProp
-" JulesWang plugin
-hi link cssBraces           Normal
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/css/juleswang-css.vim"
 " }}}
-
 " LESS Highlighting "{{{
 " =================
-" Groenewege plugin
-hi lessVariable            guifg=#ff5370               gui=none ctermbg=none
-hi lessDefinition          guifg=#80cbc4               gui=none ctermbg=none
-hi lessClass               guifg=#c3e88d               gui=none ctermbg=none
-hi lessAmpersandChar       guifg=#d9f5dd               gui=none ctermbg=none
-" Genoma plugin
-hi lessAmpersand           guifg=#d9f5dd               gui=none ctermbg=none
-hi lessClassChar           guifg=#c3e88d               gui=none ctermbg=none
-hi lessFunction            guifg=#c3e88d               gui=none ctermbg=none
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/less/genoma-vim-less.vim"
 " }}}
-
 " SH Highlighting "{{{
 " ===============
-" Statements
-hi shStatement            guifg=#c792ea               gui=none ctermbg=none
-hi shTestOpr              guifg=#d9f5dd               gui=none ctermbg=none
-hi link shVariable Function
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/bash/bash.vim"
 " }}}
-
 " NERDTree Highlighting "{{{
 " =====================
-" Highlighting for directory nodes and file nodes
-hi NERDTreeDirSlash        guifg=#afbdc4               gui=none ctermbg=none
-hi NERDTreeDir             guifg=#afbdc4               gui=bold ctermbg=none
-hi NERDTreeUp              guifg=#ff0000               gui=none ctermbg=none
-hi NERDTreeFile            guifg=#607d8b               gui=none ctermbg=none
-hi NERDTreeCWD             guifg=#80cbc4               gui=none ctermbg=none
-hi NERDTreeOpenable        guifg=#80cbc4               gui=none ctermbg=none
-hi NERDTreeClosable        guifg=#80cbc4               gui=none ctermbg=none
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/nerdtree/nerdtree.vim"
 " }}}
