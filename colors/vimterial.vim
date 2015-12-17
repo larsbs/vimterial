@@ -232,7 +232,8 @@ hi Todo                 gui=bold
 
 " JavaScript Highlighting "{{{
 " =======================
-execute 'source ' . expand("<sfile>:p:h") . "/syntax/javascript/vim-javascript-syntax.vim"
+"execute 'source ' . expand("<sfile>:p:h") . "/syntax/javascript/vim-javascript-syntax.vim"
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/javascript/pangloss-vim-javascript.vim"
 " }}}
 " HTML Highlighting "{{{
 " =================
