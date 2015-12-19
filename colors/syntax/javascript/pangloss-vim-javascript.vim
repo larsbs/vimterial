@@ -28,7 +28,7 @@ hi link jsNull                  Constant
 hi link jsUndefined             Constant
 
 hi link jsFunctionKey           Function
-
+hi link jsFuncCall              Function
 hi link jsFuncAssignExpr        Function
 hi link jsFuncAssignIdent       Function
 
