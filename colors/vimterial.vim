@@ -139,6 +139,7 @@ Hi String               s:soft_green         s:ignore
 " ===========
 " Any variable name
 Hi Identifier           s:soft_violet        s:ignore
+hi Identifier           gui=none
 " Function name (also: methods for classes)
 Hi Function             s:light_blue         s:ignore
 " }}}
@@ -147,6 +148,7 @@ Hi Function             s:light_blue         s:ignore
 " ==========
 " Any statement
 Hi Statement            s:soft_violet        s:ignore
+hi Statement            gui=none
 " if, then, else, endif, switch, etc.
 "hi Conditional
 " for, do, while, etc.
@@ -179,6 +181,7 @@ Hi PreProc              s:soft_violet        s:ignore
 " =====
 " int, long, char, etc.
 Hi Type                 s:soft_violet        s:ignore
+hi Type                 gui=none
 " static, register, volatile, etc.
 "hi StorageClass
 " struct, union, enum, etc.
