@@ -242,6 +242,10 @@ execute 'source ' . expand("<sfile>:p:h") . "/syntax/javascript/pangloss-vim-jav
 " =================
 execute 'source ' . expand("<sfile>:p:h") . "/syntax/html/html5.vim"
 " }}}
+" XML Highlighting "{{{
+" =================
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/xml/xml.vim"
+" }}}
 " Jinja Highlighting "{{{
 " ==================
 execute 'source ' . expand("<sfile>:p:h") . "/syntax/jinja/vim-jinja2-syntax.vim"
