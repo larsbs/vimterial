@@ -9,11 +9,13 @@
 
 " HTML Highlighting "{{{
 " =================
-" Tags
 Hi htmlTag                   s:accent_teal       s:ignore
-Hi htmlTagN                  s:testing           s:ignore
-hi link htmlEndTag           htmlTag
-hi link htmlArg              Normal
 Hi htmlTagName               s:light_red         s:ignore
+
+hi link htmlEndTag           htmlTag
+
+hi link htmlArg              Normal
+
+hi link htmlTagN             htmlTagName
 hi link htmlSpecialTagName   htmlTagName
 " }}}
