@@ -18,7 +18,7 @@ This theme has been designed with the following syntax highlighting plugins in m
  * LESS: [genoma/vim-less](https://github.com/genoma/vim-less)
  * Handlebars: [mustache/vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
 
-Support for configure and extend the list of supported syntax highlighting plugins ins planned. See `colors/syntax/` for reference.
+Support for configure and extend the list of supported syntax highlighting plugins is planned. See [colors/syntax/](colors/syntax/) for reference.
 
 
 ## Installation
@@ -42,16 +42,17 @@ Then save the file and run `vim +PluginInstall`
 
 ### Javascript
 
-![JavaScript screenshot]()
+![JavaScript screenshot](screenshots/js1.png)
+![JavaScript screenshot](screenshots/js2.png)
 
 ### HTML
 
-![HTML screenshot]()
+![HTML screenshot](screenshots/html.png)
 
 ### Python
 
-![Python screenshot]()
+![Python screenshot](screenshots/py.png)
 
 ### LESS
 
-![LESS screenshot]()
+![LESS screenshot](screenshots/less.png)
