@@ -1,3 +1,13 @@
+" Vim airline theme
+"
+" This file is part of the vimterial colorschema by
+" Lorenzo Ruiz <lars.bs@hotmail.com>. See full
+" LICENSE for details.
+"
+" Maintainer: Lorenzo Ruiz <lars.bs@hotmail.com>
+" URL: http://github.com/larsbs/vimterial
+
+
 " Normal mode
 let s:N1 = [ '#cdd3de' , '#37474f' , 15 , 55  ]
 let s:N2 = [ '#cdd3de' , '#607d8b' , 15 , 98  ]

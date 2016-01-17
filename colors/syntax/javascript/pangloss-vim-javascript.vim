@@ -1,9 +1,10 @@
 " Vim color file
 "
 " This file is part of the vimterial colorscheme by
-" Lorenzo Ruiz <lars@sindrosoft.com>.
+" Lorenzo Ruiz <lars.bs@hotmail.com>. See full
+" LICENSE for details.
 "
-" Maintainer: Lorenzo Ruiz <lars@sindrosoft.com>
+" Maintainer: Lorenzo Ruiz <lars.bs@hotmail.com>
 " URL: https://github.com/larsbs/vimterial
 
 

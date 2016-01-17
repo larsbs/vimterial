@@ -1,6 +1,10 @@
 " Vim color file
-" Maintainer:   Lorenzo Ruiz <lars@sindrosoft.com>
-" Last Change:
+"
+" This file is part of the vimterial colorscheme by
+" Lorenzo Ruiz <lars.bs@hotmail.com>. See full
+" LICENSE for details.
+"
+" Maintainer: Lorenzo Ruiz <lars.bs@hotmail.com>
 " URL: https://github.com/larsbs/vimterial
 
 
@@ -235,12 +239,11 @@ hi Todo                 gui=bold
 
 " JavaScript Highlighting "{{{
 " =======================
-"execute 'source ' . expand("<sfile>:p:h") . "/syntax/javascript/vim-javascript-syntax.vim"
 execute 'source ' . expand("<sfile>:p:h") . "/syntax/javascript/pangloss-vim-javascript.vim"
 " }}}
 " HTML Highlighting "{{{
 " =================
-execute 'source ' . expand("<sfile>:p:h") . "/syntax/html/html5.vim"
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/html/othree-html5.vim"
 " }}}
 " XML Highlighting "{{{
 " =================
@@ -248,7 +251,7 @@ execute 'source ' . expand("<sfile>:p:h") . "/syntax/xml/xml.vim"
 " }}}
 " Jinja Highlighting "{{{
 " ==================
-execute 'source ' . expand("<sfile>:p:h") . "/syntax/jinja/vim-jinja2-syntax.vim"
+execute 'source ' . expand("<sfile>:p:h") . "/syntax/jinja/glench-vim-jinja2-syntax.vim"
 " }}}
 " CSS Highlighting "{{{
 " ================
