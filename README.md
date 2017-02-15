@@ -4,6 +4,8 @@ A vim color scheme based on [Material Theme](http://equinusocio.github.io/materi
 
 Currently, there is no support for terminal vim, however, it should arrive in the future.
 
+> See also a variation of this color scheme based on atom [vimtom](https://github.com/larsbs/vimtom)
+
 
 ## Target Syntax Highlighting Plugins
 
