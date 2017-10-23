@@ -77,6 +77,8 @@ let s:soft_violet       = '#c792ea'
 let s:soft_lime_green   = '#d9f5dd'
 let s:soft_orange       = '#ffcb6b'
 let s:light_red         = '#ff5370'
+
+let s:pmenu_bg          = '#1e282d'  " PMenu background
 " }}}
 
 " GENERAL "{{{
@@ -120,6 +122,10 @@ Hi WildMenu             s:testing            s:testing
 Hi Menu                 s:testing            s:testing
 Hi Scrollbar            s:testing            s:testing
 Hi Tooltip              s:testing            s:testing
+Hi Pmenu                s:lighter_grey_blue  s:pmenu_bg
+Hi PmenuSel             s:pmenu_bg           s:light_grey_blue
+Hi PmenuSbar            s:ignore             s:grey_blue
+Hi PmenuThumb           s:ignore             s:lighter_grey_blue
 " }}}
 
 

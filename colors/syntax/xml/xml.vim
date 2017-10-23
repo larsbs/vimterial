@@ -16,5 +16,5 @@ hi link xmlEqual        htmlTag
 hi link xmlTagName      htmlTagName
 hi link xmlEndTag       htmlTagName
 
-hi link xmlAttrib       htmlAttr
+hi link xmlAttrib       htmlArg
 " }}}
