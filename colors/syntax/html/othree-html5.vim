@@ -16,6 +16,8 @@ Hi htmlTagName               s:light_red         s:ignore
 hi link htmlEndTag           htmlTag
 
 hi link htmlArg              Normal
+Hi htmlArg                   s:soft_orange       s:ignore
+hi htmlArg                   gui=italic
 
 hi link htmlTagN             htmlTagName
 hi link htmlSpecialTagName   htmlTagName

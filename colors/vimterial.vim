@@ -71,12 +71,13 @@ let s:search_yellow     = '#f8e71c'
 
 let s:light_blue        = '#82b1ff'
 let s:soft_red          = '#f77669'
+let s:red               = '#FD2B45'
 let s:dark_soft_red     = '#802920'
+let s:light_red         = '#FF6775'
 let s:soft_green        = '#c3e88d'
 let s:soft_violet       = '#c792ea'
 let s:soft_lime_green   = '#d9f5dd'
 let s:soft_orange       = '#ffcb6b'
-let s:light_red         = '#ff5370'
 
 let s:pmenu_bg          = '#1e282d'  " PMenu background
 " }}}
@@ -84,6 +85,7 @@ let s:pmenu_bg          = '#1e282d'  " PMenu background
 " GENERAL "{{{
 " =======
 Hi Normal               s:lighter_grey_blue  s:darker_grey_blue
+Hi Noise                s:accent_teal        s:darker_grey_blue
 "Hi ColorColumn          s:testing            s:testing
 Hi Cursor               s:darker_grey_blue   s:light_grey_blue
 "hi CursorIM
@@ -135,6 +137,7 @@ Hi PmenuThumb           s:ignore             s:lighter_grey_blue
 " ========
 " Any comment
 Hi Comment              s:grey_blue          s:ignore
+hi comment              gui=italic
 " }}}
 
 " CONSTANTS "{{{

@@ -25,6 +25,8 @@ hi link jsBuiltins              jsSpecial
 hi link jsDecorator             jsSpecial
 hi link jsHtmlEvents            jsSpecial
 
+hi link jsObjectKey             String
+
 hi link jsNull                  Constant
 hi link jsUndefined             Constant
 
@@ -34,5 +36,6 @@ hi link jsFuncAssignExpr        Function
 hi link jsFuncAssignIdent       Function
 
 Hi jsGlobalObjects              s:soft_orange       s:ignore
-Hi jsThis                       s:soft_orange       s:ignore
+Hi jsThis                       s:light_red         s:ignore
+hi jsThis                       gui=italic
 " }}}
