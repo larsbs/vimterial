@@ -11,12 +11,12 @@
 " CSS Highlighting "{{{
 " ================
 " Common
-Hi cssProp                  s:accent_teal       s:ignore
+Hi cssProp                  g:accent_teal       g:ignore
 "hi cssAttr
 hi link cssTagName          Statement
 "hi cssIdentifier
 "hi cssDefinition
-Hi cssClassName             s:soft_green        s:ignore
+Hi cssClassName             g:soft_green        g:ignore
 hi link cssPseudoClass      cssClassName
 hi link cssPseudoClassId    cssClassName
 hi link cssNoise            Normal

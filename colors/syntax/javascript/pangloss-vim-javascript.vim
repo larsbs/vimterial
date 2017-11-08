@@ -35,7 +35,9 @@ hi link jsFuncCall              Function
 hi link jsFuncAssignExpr        Function
 hi link jsFuncAssignIdent       Function
 
-Hi jsGlobalObjects              s:soft_orange       s:ignore
-Hi jsThis                       s:light_red         s:ignore
+hi link jsClassProperty         Normal
+
+Hi jsGlobalObjects              g:soft_orange       g:ignore
+Hi jsThis                       g:light_red         g:ignore
 hi jsThis                       gui=italic
 " }}}

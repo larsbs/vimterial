@@ -12,6 +12,6 @@
 " ==================
 " Statements
 hi link jinjaStatement       Statement
-Hi jinjaVariable             s:light_blue        s:ignore
+Hi jinjaVariable             g:light_blue        g:ignore
 hi link jinjaString          String
 " }}}

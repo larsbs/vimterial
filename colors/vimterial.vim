@@ -5,7 +5,7 @@
 " LICENSE for details.
 "
 " Maintainer: Lorenzo Ruiz <lars.bs@hotmail.com>
-" URL: https://github.com/larsbs/vimterial
+" URL: httpg://github.com/larsbs/vimterial
 
 
 " CONFIGURATION "{{{
@@ -40,12 +40,12 @@ function! CustomHighlighter(name, ...)
             " Extract the color from the variable. If we don't do
             " this, then, the variable is parsed as a string and
             " we get a color asignation error.
-            redir => s:color
+            redir => g:color
             silent exe 'echo '.a:000[i]
             redir END
-            let s:color = RemoveNewlines(s:color)
-            if s:color != 'ignore'
-                let command .= ' ' . colour_order[i] . '=' . s:color
+            let g:color = RemoveNewlines(g:color)
+            if g:color != 'ignore'
+                let command .= ' ' . colour_order[i] . '=' . g:color
             endif
         endfor
         exe command
@@ -55,79 +55,55 @@ endfunc
 
 " COLORS "{{{
 " =======
-let s:none              = 'NONE'
-let s:ignore            = 'ignore'
-let s:testing           = '#CDFF00'
-
-let s:darkest_grey_blue = '#1e282d'
-let s:darker_grey_blue  = '#263238'
-let s:dark_grey_blue    = '#37474f'
-let s:grey_blue         = '#546e7a'
-let s:light_grey_blue   = '#c0c5ce'
-let s:lighter_grey_blue = '#cdd3de'
-
-let s:accent_teal       = '#80cbc4'
-let s:search_yellow     = '#f8e71c'
-
-let s:light_blue        = '#82b1ff'
-let s:soft_red          = '#f77669'
-let s:red               = '#FD2B45'
-let s:dark_soft_red     = '#802920'
-let s:light_red         = '#FF6775'
-let s:soft_green        = '#c3e88d'
-let s:soft_violet       = '#c792ea'
-let s:soft_lime_green   = '#d9f5dd'
-let s:soft_orange       = '#ffcb6b'
-
-let s:pmenu_bg          = '#1e282d'  " PMenu background
+execute 'source ' . expand("<sfile>:p:h") . "/colors_dark.vim"
 " }}}
 
 " GENERAL "{{{
 " =======
-Hi Normal               s:lighter_grey_blue  s:darker_grey_blue
-Hi Noise                s:accent_teal        s:darker_grey_blue
-"Hi ColorColumn          s:testing            s:testing
-Hi Cursor               s:darker_grey_blue   s:light_grey_blue
+Hi Normal               g:lighter_grey_blue  g:darker_grey_blue
+Hi Noise                g:accent_teal        g:darker_grey_blue
+"Hi ColorColumn          g:testing            g:testing
+Hi Cursor               g:darker_grey_blue   g:light_grey_blue
 "hi CursorIM
-Hi CursorColumn         s:ignore             s:darkest_grey_blue
-Hi CursorLine           s:ignore             s:darkest_grey_blue
-Hi Directory            s:accent_teal        s:ignore
-Hi DiffAdd              s:soft_green         s:darkest_grey_blue
+Hi CursorColumn         g:ignore             g:darkest_grey_blue
+Hi CursorLine           g:ignore             g:darkest_grey_blue
+Hi Directory            g:accent_teal        g:ignore
+Hi DiffAdd              g:soft_green         g:darkest_grey_blue
 hi DiffAdd              gui=bold
-Hi DiffChange           s:soft_orange        s:darkest_grey_blue
+Hi DiffChange           g:soft_orange        g:darkest_grey_blue
 hi DiffChange           gui=bold
-Hi DiffDelete           s:soft_red           s:darkest_grey_blue
-Hi DiffText             s:light_blue         s:darkest_grey_blue
-Hi ErrorMsg             s:darker_grey_blue   s:soft_red
+Hi DiffDelete           g:soft_red           g:darkest_grey_blue
+Hi DiffText             g:light_blue         g:darkest_grey_blue
+Hi ErrorMsg             g:darker_grey_blue   g:soft_red
 hi ErrorMsg             gui=none
-Hi VertSplit            s:darker_grey_blue   s:dark_grey_blue
-Hi Folded               s:darker_grey_blue   s:grey_blue
-Hi FoldedColumn         s:darker_grey_blue   s:grey_blue
-Hi SignColumn           s:dark_grey_blue     s:ignore
-Hi IncSearch            s:search_yellow      s:darkest_grey_blue
-Hi LineNr               s:dark_grey_blue     s:ignore
-Hi MatchParen           s:darkest_grey_blue  s:grey_blue
-Hi ModeMsg              s:light_grey_blue    s:none
-"Hi MoreMsg              s:testing            s:testing
-Hi NonText              s:dark_grey_blue     s:ignore
-Hi Question             s:light_grey_blue    s:none
+Hi VertSplit            g:darker_grey_blue   g:dark_grey_blue
+Hi Folded               g:darker_grey_blue   g:grey_blue
+Hi FoldedColumn         g:darker_grey_blue   g:grey_blue
+Hi SignColumn           g:dark_grey_blue     g:ignore
+Hi IncSearch            g:search_yellow      g:darkest_grey_blue
+Hi LineNr               g:dark_grey_blue     g:ignore
+Hi MatchParen           g:darkest_grey_blue  g:grey_blue
+Hi ModeMsg              g:light_grey_blue    g:none
+"Hi MoreMsg              g:testing            g:testing
+Hi NonText              g:dark_grey_blue     g:ignore
+Hi Question             g:light_grey_blue    g:none
 hi Question             gui=none
-Hi Search               s:darkest_grey_blue  s:search_yellow
-"Hi SpecialKey           s:testing            s:testing
-"Hi StatusLine           s:testing            s:testing
-"Hi StatusLineNC         s:testing            s:testing
-Hi Title                s:light_blue         s:ignore
-Hi Visual               s:darker_grey_blue   s:light_grey_blue
-"Hi VisualNOS            s:testing            s:testing
-Hi WarningMsg           s:soft_red           s:ignore
-Hi WildMenu             s:testing            s:testing
-Hi Menu                 s:testing            s:testing
-Hi Scrollbar            s:testing            s:testing
-Hi Tooltip              s:testing            s:testing
-Hi Pmenu                s:lighter_grey_blue  s:pmenu_bg
-Hi PmenuSel             s:pmenu_bg           s:light_grey_blue
-Hi PmenuSbar            s:ignore             s:grey_blue
-Hi PmenuThumb           s:ignore             s:lighter_grey_blue
+Hi Search               g:darkest_grey_blue  g:search_yellow
+"Hi SpecialKey           g:testing            g:testing
+"Hi StatusLine           g:testing            g:testing
+"Hi StatusLineNC         g:testing            g:testing
+Hi Title                g:light_blue         g:ignore
+Hi Visual               g:darker_grey_blue   g:light_grey_blue
+"Hi VisualNOS            g:testing            g:testing
+Hi WarningMsg           g:soft_red           g:ignore
+Hi WildMenu             g:testing            g:testing
+Hi Menu                 g:testing            g:testing
+Hi Scrollbar            g:testing            g:testing
+Hi Tooltip              g:testing            g:testing
+Hi Pmenu                g:lighter_grey_blue  g:pmenu_bg
+Hi PmenuSel             g:pmenu_bg           g:light_grey_blue
+Hi PmenuSbar            g:ignore             g:grey_blue
+Hi PmenuThumb           g:ignore             g:lighter_grey_blue
 " }}}
 
 
@@ -136,31 +112,31 @@ Hi PmenuThumb           s:ignore             s:lighter_grey_blue
 " COMMENTS "{{{
 " ========
 " Any comment
-Hi Comment              s:grey_blue          s:ignore
+Hi Comment              g:grey_blue          g:ignore
 hi comment              gui=italic
 " }}}
 
 " CONSTANTS "{{{
 " =========
 " Any constant
-Hi Constant             s:soft_red           s:ignore
+Hi Constant             g:soft_red           g:ignore
 " A string constant
-Hi String               s:soft_green         s:ignore
+Hi String               g:soft_green         g:ignore
 " }}}
 
 " IDENTIFIERS "{{{
 " ===========
 " Any variable name
-Hi Identifier           s:soft_violet        s:ignore
+Hi Identifier           g:soft_violet        g:ignore
 hi Identifier           gui=none
 " Function name (also: methods for classes)
-Hi Function             s:light_blue         s:ignore
+Hi Function             g:light_blue         g:ignore
 " }}}
 
 " STATEMENTS "{{{
 " ==========
 " Any statement
-Hi Statement            s:soft_violet        s:ignore
+Hi Statement            g:soft_violet        g:ignore
 hi Statement            gui=none
 " if, then, else, endif, switch, etc.
 "hi Conditional
@@ -169,7 +145,7 @@ hi Statement            gui=none
 " case, default, etc.
 "hi Label
 " sizeof, +, *, etc.
-Hi Operator             s:soft_lime_green    s:ignore
+Hi Operator             g:soft_lime_green    g:ignore
 " Any other keyword
 "hi Keyword
 " Try, catch, throw
@@ -179,7 +155,7 @@ Hi Operator             s:soft_lime_green    s:ignore
 " PREPROCS "{{{
 " ========
 " Generic preprocessor
-Hi PreProc              s:soft_violet        s:ignore
+Hi PreProc              g:soft_violet        g:ignore
 " Preprocessor #include
 "hi Include
 " Preprocessor #define
@@ -193,7 +169,7 @@ Hi PreProc              s:soft_violet        s:ignore
 " TYPES "{{{
 " =====
 " int, long, char, etc.
-Hi Type                 s:soft_violet        s:ignore
+Hi Type                 g:soft_violet        g:ignore
 hi Type                 gui=none
 " static, register, volatile, etc.
 "hi StorageClass
@@ -206,9 +182,9 @@ hi Type                 gui=none
 " SPECIALS "{{{
 " ========
 " Any special symbol (ex: [, ], (, ), etc.)
-Hi Special              s:lighter_grey_blue  s:ignore
+Hi Special              g:lighter_grey_blue  g:ignore
 " Special character in a constant (ex: \n, %s, etc.)
-Hi SpecialChar          s:accent_teal        s:ignore
+Hi SpecialChar          g:accent_teal        g:ignore
 " You can use CTRL-] on this
 "hi Tag
 " Character that needs attention
@@ -241,7 +217,7 @@ Hi SpecialChar          s:accent_teal        s:ignore
 " =====
 " Anything that needs extra attention; mostly the kewords
 " TODO FIXME and XXX
-Hi Todo                 s:accent_teal    s:none
+Hi Todo                 g:accent_teal    g:none
 hi Todo                 gui=bold
 " }}}
 

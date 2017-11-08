@@ -14,7 +14,7 @@ let s:N2 = [ '#cdd3de' , '#607d8b' , 15 , 98  ]
 let s:N3 = [ '#cdd3de' , '#182025' , 15 , 233 ]
 
 " Insert mode
-let s:I1 = [ '#263238' , '#82b1ff' , 15 , 33  ]
+let s:I1 = [ '#263238' , '#82AAFF' , 15 , 33  ]
 let s:I2 = [ '#cdd3de' , '#607d8b' , 15 , 39  ]
 let s:I3 = [ '#cdd3de' , '#182025' , 15 , 233 ]
 
@@ -24,7 +24,7 @@ let s:V2 = [ '#cdd3de' , '#607d8b' , 233 , 214 ]
 let s:V3 = [ '#cdd3de' , '#182025' , 15  , 233 ]
 
 " Replace mode
-let s:R1 = [ '#263238' , '#f77669' , 15 , 196 ]
+let s:R1 = [ '#263238' , '#F07178' , 15 , 196 ]
 let s:R2 = [ '#cdd3de' , '#607d8b' , 15 , 203 ]
 let s:R3 = [ '#cdd3de' , '#182025' , 15 , 233 ]
 
@@ -58,5 +58,5 @@ let g:airline#themes#vimterial#palette.tabline = {
       \ 'airline_tabsel':  [ '#cdd3de' , '#607d8b' ,  15 , 98  , '' ],
       \ 'airline_tabtype': [ '#cdd3de' , '#607d8b' ,  15 , 98  , '' ],
       \ 'airline_tabfill': [ '#cdd3de' , '#182025' ,  15 , 233 , '' ],
-      \ 'airline_tabmod':  [ '#263238' , '#f77669' ,  15 , 33  , '' ]
+      \ 'airline_tabmod':  [ '#263238' , '#F07178' ,  15 , 33  , '' ]
       \ }

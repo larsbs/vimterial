@@ -11,10 +11,10 @@
 " JavaScript Highlighting "{{{
 " =======================
 " Statement Keywords
-Hi javaScriptMessage                      s:accent_teal       s:ignore
+Hi javaScriptMessage                      g:accent_teal       g:ignore
 hi link javaScriptNull                    Constant
 hi link javaScriptEventListenerKeywords   javaScriptMessage
-Hi javaScriptGlobalObjects                s:soft_orange       s:ignore
+Hi javaScriptGlobalObjects                g:soft_orange       g:ignore
 " Function and arguments highlighting
 hi link javaScriptFuncKeyword             Identifier
 hi link javaScriptFuncDef                 Function
